@@ -1,5 +1,5 @@
   WebFontConfig = {
-    google: { families: [ 'Montserrat:400,700:latin' ] }
+    google: { families: [ 'Montserrat:400,700:latin', 'Open+Sans:400,300,300italic,400italic:latin']}
   };
   (function() {
     var wf = document.createElement('script');
