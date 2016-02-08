@@ -7,6 +7,7 @@
 	<title></title>
 	<link rel="stylesheet" href="css/jevi_style.css">
 	<link rel="stylesheet" href="css/jevi_responsive.css">
+	<script type="text/javascript" src="js/jquery.min.js"></script>
 	<script type="text/javascript" src="js/jevi_script.js"></script>
 </head>
 <body>
@@ -35,7 +36,7 @@
 					<p class="release float">1 milhão<br>de vidas</p>
 				</div>
 			</div>
-			<span class="triangles_top"></span>
+			<span id="triangles_top"></span>
 		</div>
 		<div class="content">
 			<div class="hashtag">
@@ -52,11 +53,56 @@
 			</div>
 			
 		</div>
+		<span id="triangles_bottom"></span>
 	</section>
 
 	<section id="shows">
 		<div class="wrapper">
-			
+			<img src="img/shows_title.png" alt="Peças">
+			<p class="release">
+				Reflexões da vida humana expressas através da arte cenográfica, onde se pode refletir e questionar a importância do homem e suas problemáticas.
+			</p>
+			<div id="slide">
+				<div class="overview">
+					<div class="viewPort slide_01">
+						<a href="#" class="largeImg">
+							<h6>Mortal Kombat I</h6>
+						</a>
+						<a href="#" class="smallImg">
+							<h6>Mortal Kombat II</h6>
+						</a>
+						<a href="#" class="smallImg">
+							<h6>Mortal Kombat III</h6>
+						</a>
+					</div>
+					<div class="viewPort slide_02">
+						<a href="#" class="largeImg">
+							<h6>Mortal Kombat IV</h6>
+						</a>
+						<a href="#" class="smallImg">
+							<h6>Mortal Kombat V</h6>
+						</a>
+						<a href="#" class="smallImg">
+							<h6>Mortal Kombat VI</h6>
+						</a>
+					</div>
+					<div class="viewPort slide_03">
+						<a href="#" class="largeImg">
+							<h6>Mortal Kombat VII</h6>
+						</a>
+						<a href="#" class="smallImg">
+							<h6>Mortal Kombat VIII</h6>
+						</a>
+						<a href="#" class="smallImg">
+							<h6>Mortal Kombat IX</h6>
+						</a>
+					</div>
+				</div>
+			</div>
+		<div id="slideController">
+			<button class="prev"></button>
+			<button class="next"></button>
+		</div>
 		</div>
 	</section>
 
