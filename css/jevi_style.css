@@ -1,3 +1,4 @@
+
 html,body,div,span,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,abbr,address,cite,code,del,dfn,em,img,ins,kbd,q,samp,small,strong,sub,sup,var,b,i,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td,article,aside,canvas,details,figcaption,figure,footer,header,hgroup,menu,nav,section,summary,time,mark,audio,video{margin:0;padding:0;border:0;outline:0;font-size:100%;vertical-align:baseline;background:transparent}
 body{line-height:1;}
 article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section{display:block}
@@ -259,6 +260,7 @@ h1.logo a{
 	font-size: 21px;
 	font-weight: 300;
 	line-height: 30px;
+	margin-bottom: 40px;
 }
 
 #shows .wrapper{
@@ -276,7 +278,7 @@ h1.logo a{
 */
 #slide{
 	width: 100%;
-	height: 350px;
+	height: 300px;
 	display: inline-block;
 	overflow: hidden;
 	margin-top: -1px;
@@ -284,7 +286,7 @@ h1.logo a{
 
 #slide .overview{
 	width: 306.5%;
-	height: 350px;
+	height: 300px;
 	display: block;
 	position: relative;
 }
@@ -298,14 +300,20 @@ h1.logo a{
 #slide .viewPort a{
 	display: inline-block;
 	text-decoration: none;
+	height: 100%;
+	background: rgba(64, 195, 219, 0.75) none repeat scroll 0% 0%;
+	color:#ffffff;
+	padding: 3.5% 20px;
+	box-sizing:border-box;
+
 }
+
 
 #slide .viewPort h6{
 	font-family: "Roboto",sans-serif;
 	color: #FFF;
 	font-size: 1em;
 	text-align: center;
-	/*padding: 130px 20px;*/
 	background: rgba(64, 195, 219, 0.75) none repeat scroll 0% 0%;
 	box-sizing: border-box;
 	font-weight: 100;
@@ -315,11 +323,9 @@ h1.logo a{
     visibility: hidden;
 }
 
-/*#slide .largeImg h6 { padding: 260px 20px }*/
-
 #slide .viewPort .largeImg{
 	width: 49.5%;
-	height: 350px;
+	height: 300px;
 	float: left;
 	margin-left: 2px;
 }
@@ -328,56 +334,81 @@ h1.logo a{
 
 #slide .viewPort .largeImg +a{
 	margin-bottom: 8px;
+	text-align: center;
+	font-size: 40px;
+	font-family: "Trade Winds",cursive;
+	letter-spacing: -0.5px;
+	line-height: 35px;
 }
 
 #slide .viewPort .smallImg{
 	width: 49.5%;
-	height: 100px;
+	height: 146px;
 	float: right;
+	line-height: 22px;
+	font-family: 'Open Sans', sans-serif;
+	font-weight: 300;
 }
 
 /*Definindo posicionamentos do Controller*/
-/*#slideController{
+#slideController{
 	width: 100%;
 	height: 50px;
-	position: absolute;
-	top:48%;
+	text-align: center;
 }
 
 #slideController button{
-	width: 30px;
-	height: 50px;
-	border: 0;
 	display: inline-block;
-	background: url('../img/slideButtons.png')no-repeat;
 	cursor: pointer;
-}*/
+	border-radius: 20px;
+	border: 0px solid #000;
+	font-size: 20px;
+	margin: 0px 15px;
+	padding: 3px 12px 4px 10px;
+	background: #F33;
+	border-bottom: 3px solid #980000;
+	transition: border-bottom 0.35s;
+}
 
-/*#slideController .prev{
-	position: absolute;
-	left: 5%;
+#slideController button:hover{
+	border-bottom: 3px solid #F33;
+}
+
+#slideController .prev{
+
 }
 
 #slideController .next{
-	position: absolute;
-	right: 5%;
-	background-position: 100% 0%;
-}*/
+
+}
 
 /*Inserindo imagens nos slides*/
-#slide .slide_01 a { background: url('../img/slideImg_01.jpg')no-repeat scroll center / cover; }
-#slide .slide_01 a +a { background: url('../img/slideImg_02.jpg')no-repeat scroll center / cover; }
-#slide .slide_01 a +a +a{ background: url('../img/slideImg_03.jpg')no-repeat scroll center / cover; }
+#slide .slide_01 a { background: url('../img/encontro-no-escuro_01.jpg')no-repeat scroll center / cover; }
+#slide .slide_01 a +a { background: url('../img/encontro-no-escuro_02.jpg')no-repeat scroll center / cover; }
+#slide .slide_01 a +a +a{ background: url('../img/encontro-no-escuro_03.jpg')no-repeat scroll center / cover; }
 
-#slide .slide_02 a { background: url('../img/slideImg_01.jpg')no-repeat scroll center / cover; }
-#slide .slide_02 a +a { background: url('../img/slideImg_02.jpg')no-repeat scroll center / cover; }
-#slide .slide_02 a +a +a { background: url('../img/slideImg_03.jpg')no-repeat scroll center / cover; }
+#slide .slide_02 a { background: url('../img/o-inimigo_01.jpg')no-repeat scroll center / cover; }
+#slide .slide_02 a +a { background: url('../img/o-inimigo_02.jpg')no-repeat scroll center / cover; }
+#slide .slide_02 a +a +a { background: url('../img/o-inimigo_03.jpg')no-repeat scroll center / cover; }
 
-#slide .slide_03 a { background: url('../img/slideImg_01.jpg')no-repeat scroll center / cover; }
-#slide .slide_03 a +a { background: url('../img/slideImg_02.jpg')no-repeat scroll center / cover; }
-#slide .slide_03 a +a +a { background: url('../img/slideImg_03.jpg')no-repeat scroll center / cover; }
+#slide .slide_03 a { background: url('../img/mercador-das-mascaras_01.jpg')no-repeat scroll center / cover; }
+#slide .slide_03 a +a { background: url('../img/mercador-das-mascaras_02.jpg')no-repeat scroll center / cover; }
+#slide .slide_03 a +a +a { background: url('../img/mercador-das-mascaras_03.jpg')no-repeat scroll center / cover; }
 
+/*
+	Agenda
+*/
 
+#diary{
+	background: transparent url("../img/diary_bg.jpg") no-repeat scroll 0% 0% / cover;
+}
+
+#diary h3 {
+	color: #ffe465;
+	text-align: center;
+	font-size: 3em;
+	margin-bottom: 30px;
+}
 
 
 

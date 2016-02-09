@@ -1,6 +1,10 @@
 $(document).ready(function(){
   WebFontConfig = {
-    google: { families: [ 'Montserrat:400,700:latin', 'Open+Sans:400,300,300italic,400italic:latin']}
+    google: { families: [
+      'Montserrat:400,700:latin',
+      'Open+Sans:400,300,300italic,400italic:latin',
+      'Trade+Winds::latin'
+      ]}
   };
   (function() {
     var wf = document.createElement('script');
@@ -24,13 +28,13 @@ $(document).ready(function(){
     $nextBtn.click(function(){
         if (min+1 > max) return;
         min++;
-        $($overview).animate({left: "-=100.3%"},1250);
+        $($overview).animate({left: "-=100.3%"},1000);
     });
 
     $prevBtn.click(function(){
         if (min-1 < 1) return;
         min--; 
-        $($overview).animate({left: "+=100.3%"},1250);
+        $($overview).animate({left: "+=100.3%"},1000);
     });
   })();
 
