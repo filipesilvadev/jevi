@@ -21,8 +21,6 @@ body{ font-family: 'Montserrat', sans-serif; }
 
 .float { float:left; }
 
-.last { margin-right: 0!important }
-
 .wrapper{
 	display: block;
 	padding: 0 100px;
@@ -53,6 +51,14 @@ section{
 _:-moz-tree-row(hover), .seeMore { padding: 0 25px 0 0 }
 
 .seeMore:hover { background: transparent url("../img/see_more.png") no-repeat scroll 100% -21px }
+
+.signature {
+	width: 211px;
+	height: 39px;
+	display: inline-block;
+	background: url('../img/adiel-hazaitz.png')no-repeat;
+	color: transparent;
+}
 
 /*
 	Menu principal
@@ -314,7 +320,6 @@ h1.logo a{
 	margin-left: 2px;
 }
 
-#slide a:hover h6 { visibility: visible }
 
 #slide .viewPort .largeImg +a{
 	margin-bottom: 8px;
@@ -510,6 +515,123 @@ article.open button {
 	padding: 0;
 }
 
+
+/*
+	Projetos
+*/
+#projects {
+	background: transparent url("../img/project-main_top.jpg") no-repeat scroll 0% 0% / cover;
+	display: block;
+	padding-bottom: 60px;
+	position: relative;
+}
+
+#projects .main_project {
+	display: inline-block;
+	width: 200px;
+}
+
+#projects .main_project img { margin: 95px 0 10px 130px }
+
+#projects .signature { margin: 5px 0 30px 120px }
+
+#projects .sinopse {
+	width: 200px;
+	float: right;
+	display: inline-block;
+	padding: 50px 25px 40px 40px;
+	background: rgba(255, 255, 255, 0.3) none repeat scroll 0% 0%;
+	position: relative;
+	margin: 6%;
+}
+
+#projects .sinopse .crop {
+	max-height: 320px;
+	line-height: 22px;
+	overflow: scroll;
+	display: block;
+	padding-right: 15px 
+}
+
+#projects .sinopse p { margin-bottom: 20px }
+
+#projects .sinopse a {
+	display: block;
+	margin-top: 35px;
+	text-align: center;
+	text-transform: uppercase;
+	color: #FF2D00;
+	text-decoration: none;
+	background: #fff;
+	padding: 15px 0;
+	-webkit-box-shadow: 0px 2px 0px 0px rgba(0,0,0,0.2);
+	-moz-box-shadow: 0px 2px 0px 0px rgba(0,0,0,0.2);
+	box-shadow: 0px 2px 0px 0px rgba(0,0,0,0.2);
+}
+
+#projects .sinopse a:hover {
+	color: #920000;
+	-webkit-box-shadow: 0px 1px 0px 0px rgba(0,0,0,0.15);
+	-moz-box-shadow: 0px 1px 0px 0px rgba(0,0,0,0.15);
+	box-shadow: 0px 1px 0px 0px rgba(0,0,0,0.15);
+}
+
+/*
+	Direção
+*/
+#direction { 
+	background: transparent url("../img/direction-bg.jpg") no-repeat scroll 0% 0% / cover;
+	text-align: center;
+}
+
+#direction .director {
+	display: inline-block;
+	width: 453px;
+	height: 595px;
+}
+#direction .director div{
+	font-family: 'Open Sans', sans-serif;
+	letter-spacing: 0.5px;
+	text-transform: uppercase;
+}
+
+#direction .director.first{
+	background: url('../img/director-eliane.png')no-repeat;
+	margin: 100px 0 50px 0;
+	text-align: right;
+}
+
+#direction .director.first div{
+	padding: 0 10px 0 0;
+	margin-top: 330px;
+}
+
+
+#direction .director.last{
+	background: url('../img/director-adiel.png')no-repeat;
+	float: right;
+	margin: 20px 0 0 0;
+	text-align: left;
+}
+
+#direction .director.last div{
+	padding: 0 0 0 10px;
+	margin-top: 256px;
+}
+
+#direction div a {
+	display: inline-block;
+	width: 32px;
+	height: 32px;
+	background: url('../img/direction-fb.jpg');
+}
+
+#direction div a +a{
+	display: inline-block;
+	width: 32px;
+	height: 32px;
+	background: url('../img/direction-mail.jpg');
+}
 
 
 

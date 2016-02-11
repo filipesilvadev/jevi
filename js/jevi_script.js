@@ -91,7 +91,8 @@ $(document).ready(function(){
             show      = $(id + ' .show'),
             hour      = $(id + ' .event .hour'),
             location  = $(id + ' .event .location'),
-            city      = $(id + ' .event .city-state');
+            city      = $(id + ' .event .city-state'),
+            eachButton = $('#prod_'+[i]+' #btn'+[i]);
           
           month.html(shows[i].month);
           day.html(shows[i].day);
@@ -100,24 +101,26 @@ $(document).ready(function(){
           location.html(shows[i].location);
           city.html(shows[i].city);
 
-         var eachButton = $('#prod_'+[i]+' #btn'+[i]);
-         continue
+        //  var eachButton = $('#prod_'+[i]+' #btn'+[i]),
+        //     eachShow = $('#prod_'+[i]);
 
-            eachButton.on('click', function(){
-              var eachShow = $('#prod_'+[i]);
-              if (eachShow.hasClass('closed')) {
-                  eachShow.attr('class', 'open');
-              }else{
-                  eachShow.attr('class', 'closed');
-              }
+        //     eachButton.on('click', function(){
+        //       if (eachShow.hasClass('closed')) {
+        //           eachShow.attr('class', 'open');
+                  
+        //       }else{
+        //           eachShow.attr('class', 'closed');
+        //       }
+        //     });
 
+          console.log(eachButton);
 
-            });
+          
 
-        console.log(eachShow);
-        console.log(eachButton);
 
         };
+
+
 
         
 
