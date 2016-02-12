@@ -1,4 +1,6 @@
 $(document).ready(function(){
+  
+  //Google Fonts API
   WebFontConfig = {
     google: { families: [
       'Montserrat:400,700:latin',
@@ -17,6 +19,30 @@ $(document).ready(function(){
     s.parentNode.insertBefore(wf, s);
   })();
 
+  //Scroll animation
+  $(function smoothScroll() {
+  $('a[href*="#"]:not([href="#"])').click(function() {
+    if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
+      var target = $(this.hash);
+      target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
+      if (target.length) {
+        $('html, body').animate({
+          scrollTop: target.offset().top
+        }, 1500);
+        return false;
+        }
+      } 
+    });
+  });
+
+  //Animate Background Sky
+  (function animateSky () {
+     var sky = $('.bio_title');
+     sky.animate({'background-position-x': "100%"},10000, 'linear');
+     console.log(sky);
+  })();
+
+  //The main slider of 'Peças'
   (function sliderJevi(){
     var $overview = $('#slide .overview'),
       $viewport = $('#slide .viewPort'),
@@ -39,8 +65,8 @@ $(document).ready(function(){
     });
   })();
 
+  //Events from Diary
   (function Agenda(){     
-    
       var shows = [
           {
             show: 'O Inimigo',
@@ -101,30 +127,21 @@ $(document).ready(function(){
           location.html(shows[i].location);
           city.html(shows[i].city);
 
-        //  var eachButton = $('#prod_'+[i]+' #btn'+[i]),
-        //     eachShow = $('#prod_'+[i]);
+         var eachButton = $('#prod_'+[i]+' #btn'+[i]),
+            eachShow = $('#prod_'+[i]);
 
-        //     eachButton.on('click', function(){
-        //       if (eachShow.hasClass('closed')) {
-        //           eachShow.attr('class', 'open');
+            eachButton.on('click', function(){
+              if (eachShow.hasClass('closed')) {
+                  eachShow.attr('class', 'open');
                   
-        //       }else{
-        //           eachShow.attr('class', 'closed');
-        //       }
-        //     });
+              }else{
+                  eachShow.attr('class', 'closed');
+              }
+            });
 
-          console.log(eachButton);
-
-          
-
+        console.log(eachButton);
 
         };
-
-
-
-        
-
-
     
   })();
 
