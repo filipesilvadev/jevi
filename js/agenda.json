@@ -1,0 +1,26 @@
+[
+  {
+    "show": "O Inimigo",
+    "day": "20",
+    "month": "Fev",
+    "hour": "13:30",
+    "location": "Igreja Templo das Águias",
+    "city": "Curitiba-PR"
+  },
+  {
+    "show": "Principados & Potestades",
+    "day": "01",
+    "month": "Mar",
+    "hour": "13:30",
+    "location": "Igreja Templo das Águias",
+    "city": "Curitiba-PR"
+  },
+  {
+    "show": "Mercador das Mascaras",
+    "day": "15",
+    "month": "Abr",
+    "hour": "13:30",
+    "location": "Igreja Templo das Águias",
+    "city": "Curitiba-PR"
+  }
+]

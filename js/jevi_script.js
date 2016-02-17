@@ -1,5 +1,4 @@
 $(document).ready(function(){
-  
   //Google Fonts API
   WebFontConfig = {
     google: { families: [
@@ -39,7 +38,6 @@ $(document).ready(function(){
   (function animateSky () {
      var sky = $('.bio_title');
      sky.animate({'background-position-x': "100%"},10000, 'linear');
-     console.log(sky);
   })();
 
   //The main slider of 'Peças'
@@ -67,32 +65,9 @@ $(document).ready(function(){
 
   //Events from Diary
   (function Agenda(){     
-      var shows = [
-          {
-            show: 'O Inimigo',
-            day: '20',
-            month: 'Fev',
-            hour: '13:30',
-            location: 'Igreja Templo das Águias',
-            city: 'Curitiba-PR'
-          },
-          {
-            show: 'Principados & Potestades',
-            day: '01',
-            month: 'Mar',
-            hour: '13:30',
-            location: 'Igreja Templo das Águias',
-            city: 'Curitiba-PR'
-          },
-          {
-            show: 'Mercador das Mascaras',
-            day: '15',
-            month: 'Abr',
-            hour: '13:30',
-            location: 'Igreja Templo das Águias',
-            city: 'Curitiba-PR'
-          }
-      ];
+
+      $.getJSON('js/agenda.json', function(shows){
+        var $json = shows
 
         for (var i = 0; i < shows.length; i++) {
           var id = "#prod_"+[i],
@@ -117,8 +92,7 @@ $(document).ready(function(){
             show      = $(id + ' .show'),
             hour      = $(id + ' .event .hour'),
             location  = $(id + ' .event .location'),
-            city      = $(id + ' .event .city-state'),
-            eachButton = $('#prod_'+[i]+' #btn'+[i]);
+            city      = $(id + ' .event .city-state');
           
           month.html(shows[i].month);
           day.html(shows[i].day);
@@ -127,22 +101,22 @@ $(document).ready(function(){
           location.html(shows[i].location);
           city.html(shows[i].city);
 
-         var eachButton = $('#prod_'+[i]+' #btn'+[i]),
-            eachShow = $('#prod_'+[i]);
+          var eachButton = $(id+' #btn'+[i]),
+              eachShow = $('article '+id);
 
-            eachButton.on('click', function(){
-              if (eachShow.hasClass('closed')) {
-                  eachShow.attr('class', 'open');
-                  
+
+          eachButton.click(function() {
+            var currentShow = $(this).parent(eachShow);
+              if (currentShow.hasClass('closed')) {
+                  currentShow.attr('class', 'open');
+                  $(this).text('Fechar');
               }else{
-                  eachShow.attr('class', 'closed');
+                  currentShow.attr('class', 'closed');
+                  $(this).text('Ver mais');
               }
-            });
-
-        console.log(eachButton);
-
+          });
         };
-    
+    });
   })();
 
 });

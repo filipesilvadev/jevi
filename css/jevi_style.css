@@ -98,8 +98,7 @@ nav{
 }
 
 .mainMenu li:hover a,
-.mainMenu li a:hover,
-.nav-active{
+.mainMenu li a:hover {
 	background:#fff;
 	color: #000000;
 	padding: 5px 0 8px 10px;
@@ -168,6 +167,7 @@ h1.logo a{
 #biography #triangles_top {
 	background: url('../img/bio_top.png')no-repeat;
 	position: absolute;
+	margin:initial;
 	width: 253px;
 	height: 132px;
 	top: 150px;
@@ -320,8 +320,23 @@ h1.logo a{
 	height: 300px;
 	float: left;
 	margin-left: 2px;
+	padding: 0;
 }
 
+#slide .viewPort .largeImg span{
+	background: rgba(255, 171, 0, 0.65) url('../img/seeMore.png')no-repeat center 108px;
+	opacity:0;
+	display: inline-block;
+	width: 100%;
+	text-align: center;
+	text-transform: uppercase;
+	font-size: 14px;
+	letter-spacing: 2px;
+	padding: 156px 0 130px 0;
+	transition: opacity 0.65s;
+}
+
+#slide a.largeImg:hover span { opacity:1; }
 
 #slide .viewPort .largeImg +a{
 	margin-bottom: 8px;
@@ -369,9 +384,7 @@ h1.logo a{
 	text-transform: uppercase;
 }
 
-#slideController button:hover{
-	border-bottom: 3px solid #F33;
-}
+#slideController button:hover{ border-bottom: 3px solid #F33; }
 
 /*Inserindo imagens nos slides*/
 #slide .slide_01 a { background: url('../img/encontro-no-escuro_01.jpg')no-repeat scroll center / cover; }
