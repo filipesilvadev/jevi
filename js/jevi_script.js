@@ -34,6 +34,31 @@ $(document).ready(function(){
     });
   });
 
+  //Lightbox Biografia
+    (function biographyBox () {
+      var seeMore = $('.seeMore'),
+          layer = $('#lightbox_bio'),
+          layerHide = layer.css('display') == 'none',
+          layerVisible = layer.css('display') == 'block',
+          closeLayer = $('#lightbox_bio .close button');
+
+
+          seeMore.click(function() {
+            if (layerHide) {
+              layer.css('display', 'block');
+            }else if(layerVisible){
+              layer.css('display', 'none');
+            }
+
+            closeLayer.on('click', function(event) {
+              event.preventDefault();
+              layer.css('display', 'none');
+            });
+
+
+          });
+    })();
+
   //Animate Background Sky
   (function animateSky () {
      var sky = $('.bio_title');
@@ -102,6 +127,7 @@ $(document).ready(function(){
           city.html(shows[i].city);
 
           var eachButton = $(id+' #btn'+[i]),
+              currentEvent = $('article '+id+' .event'),
               eachShow = $('article '+id);
 
 

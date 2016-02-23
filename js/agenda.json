@@ -2,25 +2,25 @@
   {
     "show": "O Inimigo",
     "day": "20",
-    "month": "Fev",
-    "hour": "13:30",
-    "location": "Igreja Templo das Águias",
-    "city": "Curitiba-PR"
+    "month": "Abr",
+    "hour": "16:00",
+    "location": "Centro de eventos RIO+",
+    "city": "Rio de Janeiro-RJ"
   },
   {
     "show": "Principados & Potestades",
     "day": "01",
-    "month": "Mar",
-    "hour": "13:30",
-    "location": "Igreja Templo das Águias",
-    "city": "Curitiba-PR"
+    "month": "Mai",
+    "hour": "19:30",
+    "location": "Adonai Del Castilho",
+    "city": "Rio de Janeiro-RJ"
   },
   {
     "show": "Mercador das Mascaras",
-    "day": "15",
-    "month": "Abr",
-    "hour": "13:30",
-    "location": "Igreja Templo das Águias",
-    "city": "Curitiba-PR"
+    "day": "16",
+    "month": "Jun",
+    "hour": "09:25",
+    "location": "Posto 8 Copacabana",
+    "city": "Rio de Janeiro-RJ"
   }
 ]

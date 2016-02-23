@@ -12,7 +12,7 @@ del{text-decoration:line-through}
 abbr[title],dfn[title]{border-bottom:1px dotted;cursor:help}
 table{border-collapse:collapse;border-spacing:0}
 hr{display:block;height:1px;border:0;border-top:1px solid #ccc;margin:1em 0;padding:0}
-input,select{vertical-align:middle}
+input,select{vertical-align:middle;}
 
 /*
 	Default
@@ -48,9 +48,9 @@ section, footer{
 	padding: 1px 25px 1px 0;
 }
 
-_:-moz-tree-row(hover), .seeMore { padding: 0 25px 0 0 }
+_:-moz-tree-row(hover), .seeMore { padding: 0 25px 0 0; }
 
-.seeMore:hover { background: transparent url("../img/see_more.png") no-repeat scroll 100% -21px }
+.seeMore:hover { background: transparent url("../img/see_more.png") no-repeat scroll 100% -21px; }
 
 .signature {
 	width: 211px;
@@ -58,6 +58,56 @@ _:-moz-tree-row(hover), .seeMore { padding: 0 25px 0 0 }
 	display: inline-block;
 	background: url('../img/adiel-hazaitz.png')no-repeat;
 	color: transparent;
+}
+
+#lightbox_bio {
+	display: none;
+	width: 800px;
+	height: 600px;
+	left: 50%;
+	margin-left:-400px;
+	margin-top: -300px;
+	top: 50%;
+	background: #000;
+	-webkit-box-shadow: 0px 0px 35px 0px rgba(0,0,0,0.75);
+	-moz-box-shadow: 0px 0px 35px 0px rgba(0,0,0,0.75);
+	box-shadow: 0px 0px 35px 0px rgba(0,0,0,0.75);
+	border-radius: 20px 20px 20px 20px;
+	-moz-border-radius: 20px 20px 20px 20px;
+	-webkit-border-radius: 20px 20px 20px 20px;
+	border: 0px solid #000000;
+	position: fixed;
+	z-index: 10;
+	overflow: scroll;
+}
+
+#lightbox_bio .close{
+	width:800px;
+	position:fixed;
+	display:block;
+	background:#171717;
+	height:50px;
+	border-radius: 20px 20px 0px 0px;
+	-moz-border-radius: 20px 20px 0px 0px;
+	-webkit-border-radius: 20px 20px 0px 0px;
+	border: 0px solid #000000;
+}
+
+#lightbox_bio button {
+	float: right;
+	margin: 10px 10px 0 0;
+	border-radius: 20px 20px 0px 0px;
+	border-radius: 20px 20px 20px 20px;
+	-moz-border-radius: 20px 20px 20px 20px;
+	-webkit-border-radius: 20px 20px 20px 20px;
+	border: 0px solid #000000;
+	border: 0;
+	background: orange;
+	font-family: 'Montserrat', sans-serif;
+	font-weight: 900;
+	text-transform: uppercase;
+	padding: 5px 10px;
+	cursor:pointer;
 }
 
 /*
@@ -241,6 +291,9 @@ h1.logo a{
 
  #biography .seeMore{
 	margin-bottom: 10px;
+	border: 0;
+    height: 21px;
+    cursor:pointer;
 }
 
 #biography .content{
@@ -304,7 +357,7 @@ h1.logo a{
 }
 
 #slide .viewPort a,
-#slide .viewPort p{
+#slide .viewPort p {
 	display: inline-block;
 	text-decoration: none;
 	height: 100%;
@@ -321,6 +374,7 @@ h1.logo a{
 	float: left;
 	margin-left: 2px;
 	padding: 0;
+	cursor: pointer;
 }
 
 #slide .viewPort .largeImg span{
@@ -386,10 +440,44 @@ h1.logo a{
 
 #slideController button:hover{ border-bottom: 3px solid #F33; }
 
+.galery {
+    position: absolute;
+    background: red;
+    width: inherit;
+    height: 100%;
+    z-index:999;
+}
+
+.galery .close{
+	position:absolute;
+}
+
+.galery li {
+	width: 100%;
+    height: 100%;
+    background-size: cover;
+    display: inline-block;
+    background: blue;
+}
+
+.galery button {
+	position: absolute;
+	top:45%;
+}
+
+.galery button.prevPhoto {
+
+}
+
+.galery button.nextPhoto {
+	right:0;
+}
+
 /*Inserindo imagens nos slides*/
 #slide .slide_01 a { background: url('../img/encontro-no-escuro_01.jpg')no-repeat scroll center / cover; }
 #slide .slide_01 a +a { background: url('../img/encontro-no-escuro_02.jpg')no-repeat scroll center / cover; }
 #slide .slide_01 p{ background: url('../img/encontro-no-escuro_03.jpg')no-repeat scroll center / cover; }
+
 
 #slide .slide_02 a { background: url('../img/o-inimigo_01.jpg')no-repeat scroll center / cover; }
 #slide .slide_02 a +a { background: url('../img/o-inimigo_02.jpg')no-repeat scroll center / cover; }
